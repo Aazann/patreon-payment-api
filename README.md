@@ -1,10 +1,8 @@
-### patreon-payment-api
+# Patreon Payment API
 
-This project provides a Python API for interacting with Patreon. Below are instructions for setting up and running the API, as well as details on the available endpoints.
+The **Patreon Payment API** provides a Python-based solution for interacting with Patreon. This API allows you to retrieve data about paid and non-paid members, simplifying the integration of Patreon payment information into your projects.
 
 ![license](https://img.shields.io/badge/license-MIT-red)
-[![discord](https://img.shields.io/discord/987749138743582811?color=7289da&logo=discord&logoColor=white)](https://discord.gg/ghouls)
-
 
 ## Table of Contents
 - [Installation](#installation)
@@ -18,6 +16,8 @@ This project provides a Python API for interacting with Patreon. Below are instr
 
 ## Installation
 
+To set up the project locally, follow these steps:
+
 1. Clone the repository:
    ```bash
    git clone https://github.com/exrod/patreon-payment-api.git
@@ -30,11 +30,11 @@ This project provides a Python API for interacting with Patreon. Below are instr
    ```
 
 3. Activate the virtual environment:
-   - On Windows:
+   - On **Windows**:
      ```bash
      venv\Scripts\activate
      ```
-   - On Unix or MacOS:
+   - On **Unix** or **MacOS**:
      ```bash
      source venv/bin/activate
      ```
@@ -46,14 +46,18 @@ This project provides a Python API for interacting with Patreon. Below are instr
 
 ## Setup
 
-1. Obtain a Patreon API access token and set it as an environment variable:
+Before running the API, you need to configure your Patreon API access:
+
+1. Obtain a **Patreon API access token**.
+2. Set the token as an environment variable:
    ```bash
    export ACCESS_TOKEN=your_access_token
    ```
-   OR
-2. Update the `.env` file with your configurations.
+   Alternatively, you can update the `.env` file with your access token.
 
 ## Running the API
+
+To run the API server:
 
 1. Start the Flask server:
    ```bash
@@ -64,49 +68,50 @@ This project provides a Python API for interacting with Patreon. Below are instr
 
 ## API Endpoints
 
-### Get Non Paid Members Info
+### 1. Get Non-Paid Members Information
 
 - **Endpoint**: `/patreon/non_active`
 - **Method**: `GET`
-- **Description**: Retrieves detailed information about Non Paid Members.
+- **Description**: Fetches detailed information about non-paid members.
 - **Example Request**:
   ```bash
   curl -X GET "http://localhost:6969/patreon/non_active"
   ```
 
-### Get Paid Members Info
+### 2. Get Paid Members Information
 
 - **Endpoint**: `/patreon/active`
 - **Method**: `GET`
-- **Description**: Retrieves detailed information about Non Paid Members.
+- **Description**: Fetches detailed information about paid members.
 - **Example Request**:
   ```bash
   curl -X GET "http://localhost:6969/patreon/active"
   ```
 
-### Get All Members Info
+### 3. Get All Members Information
 
 - **Endpoint**: `/patreon`
 - **Method**: `GET`
-- **Description**: Retrieves detailed information about Members.
+- **Description**: Retrieves detailed information about all members, both paid and non-paid.
 - **Example Request**:
   ```bash
-  curl -X GET "http://localhost:6969/patreon/active"
+  curl -X GET "http://localhost:6969/patreon"
   ```
 
 ## Usage
 
-After starting the server, use the API endpoints to interact with the Patreon API. You can use tools like `curl` or Postman to test the endpoints.
+After starting the server, you can interact with the API using tools like `curl` or Postman. Simply send HTTP requests to the appropriate endpoints to retrieve the desired member data.
 
 ## Contributing
 
-We welcome contributions! Please open an issue or submit a pull request.
+We welcome contributions to improve this project! To contribute:
+- Open an issue if you encounter a bug or have suggestions for enhancements.
+- Submit a pull request with your proposed changes.
 
 ## License
 
-This project is licensed under the MIT License.
+This project is licensed under the [MIT License](LICENSE).
 
 ## Contact
 
-For any inquiries, please contact the repository owner at [exrod](https://github.com/exrod).
-Join our Discord https://brogot.space/
+For any inquiries, please contact the repository owner via [devinrhinos](https://github.com/exrod).
